@@ -1,13 +1,19 @@
 # Tokiko's Order
 
-小説の表紙入稿用に、表紙・背表紙・断ち切り・塗り足しを色分けした JPEG 画像を生成します。全ての寸法入力はミリメートルです。C#版と Bash＋ImageMagick版を利用できます。
+小説の表紙入稿用に、表紙・背表紙・断ち切り・塗り足しを色分けしたJPEG 画像を生成します。
+
+全ての寸法入力はミリメートルです。
+
+C#版とBash＋ImageMagick版を利用できます。
 
 ## 必要なもの
 
 - **C#版:** .NET 10 SDK
-- **Bash版:** Bash、awk、ImageMagick 6 または 7（`convert` または `magick` コマンド）
+- **Bash版:** Bash、awk、ImageMagick6または7（`convert`または`magick`コマンド）
 
-C#版は SkiaSharp を使用し、Six Labors のライセンスキーは必要ありません。Linux ARM64 用の SkiaSharp ネイティブ資産もプロジェクトに含めています。
+C#版は SkiaSharp を使用し、SixLabors のライセンスキーは必要ありません。
+
+LinuxARM64用のSkiaSharpネイティブ資産もプロジェクトに含めています。
 
 ## 入力仕様
 
@@ -31,7 +37,13 @@ C#版は SkiaSharp を使用し、Six Labors のライセンスキーは必要�
 <表紙高さmm> <表紙幅mm> <背幅mm> <断ち切りmm> <塗り足しmm> <350|600> [出力.jpg]
 ```
 
-出力先以外の引数は必須です。表紙の高さと幅は0より大きい数値、背幅・断ち切り・塗り足しは0以上の数値を指定してください。解像度は350または600 DPIです。塗り足し幅の2倍は、表紙の高さと幅のそれぞれより小さくしてください。
+出力先以外の引数は必須です。
+
+表紙の高さと幅は0より大きい数値、背幅・断ち切り・塗り足しは0以上の数値を指定してください。
+
+解像度は350または600 DPIです。
+
+塗り足し幅の2倍は、表紙の高さと幅のそれぞれより小さくしてください。
 
 ### C#版
 
@@ -42,14 +54,14 @@ dotnet run --project src/TokikosOrder -- 210 148 12 3 3 350 ./cover.jpg
 
 #### Linux ARM64 実行ファイルの発行
 
-次のコマンドで Linux ARM64 用の実行ファイルと依存ファイルを `publish/linux-arm64/` に発行します。
+次のコマンドでLinuxARM64用の実行ファイルと依存ファイルを `publish/linux-arm64/` に発行します。
 
 ```bash
 dotnet publish src/TokikosOrder/TokikosOrder.csproj -c Release -r linux-arm64 --self-contained false -o publish/linux-arm64
 ./publish/linux-arm64/TokikosOrder 210 148 12 3 3 350 ./cover.jpg
 ```
 
-発行先の `TokikosOrder` は Linux ARM64 用の実行ファイルです。実行環境には .NET 10 ランタイムが必要です。
+発行先の`TokikosOrder`はLinuxARM64用の実行ファイルです。実行環境には.NET10ランタイムが必要です。
 
 ### Bash＋ImageMagick版
 
@@ -57,7 +69,9 @@ dotnet publish src/TokikosOrder/TokikosOrder.csproj -c Release -r linux-arm64 --
 ./tokikosOrder.sh 210 148 12 3 3 350 ./cover.jpg
 ```
 
-ImageMagick 6 と 7 の両方に対応します。実行できない場合は、スクリプトに実行権限を付けてください。
+ImageMagick6と7の両方に対応します。
+
+実行できない場合は、スクリプトに実行権限を付けてください。
 
 ```bash
 chmod +x tokikosOrder.sh
@@ -65,7 +79,7 @@ chmod +x tokikosOrder.sh
 
 ## 画像仕様
 
-出力形式は JPEG（`.jpg`）です。画像全体の寸法は以下の通りです。
+出力形式はJPEG（`.jpg`）です。画像全体の寸法は以下の通りです。
 
 | 方向 | 寸法（mm） |
 | --- | --- |
