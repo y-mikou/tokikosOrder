@@ -2,6 +2,8 @@
 
 小説の表紙入稿用に、表紙・背表紙・断ち切り・塗り足しを色分けしたJPEG 画像を生成します。
 
+<img width="1920" height="1199" alt="Image" src="https://github.com/user-attachments/assets/ac231518-b8e0-4438-af49-556fecef85cb" />
+
 全ての寸法入力はミリメートルです。
 
 C#版とBash＋ImageMagick版を利用できます。
