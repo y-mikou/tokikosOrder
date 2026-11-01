@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0/linux-arm64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {},
+    ".NETCoreApp,Version=v10.0/linux-arm64": {
+      "TokikosOrder/1.0.0": {
+        "dependencies": {
+          "SkiaSharp": "4.154.0",
+          "SkiaSharp.NativeAssets.Linux.NoDependencies": "4.154.0"
+        },
+        "runtime": {
+          "TokikosOrder.dll": {}
+        }
+      },
+      "SkiaSharp/4.154.0": {
+        "runtime": {
+          "lib/net10.0/SkiaSharp.dll": {
+            "assemblyVersion": "4.154.0.0",
+            "fileVersion": "4.154.0.0"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux.NoDependencies/4.154.0": {
+        "native": {
+          "runtimes/linux-arm64/native/libSkiaSharp.so": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TokikosOrder/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SkiaSharp/4.154.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R3BuszJ3tUFmni37nZIRawXL0yx+XHyx7xi1716/0TybuEQFhnBx48Ig3rFpeVFQVytpGpJZZ+NLW9d9UPG7EA==",
+      "path": "skiasharp/4.154.0",
+      "hashPath": "skiasharp.4.154.0.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.Linux.NoDependencies/4.154.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw==",
+      "path": "skiasharp.nativeassets.linux.nodependencies/4.154.0",
+      "hashPath": "skiasharp.nativeassets.linux.nodependencies.4.154.0.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+/home/youmikou/git/tokikosOrder/publish/linux-arm64/TokikosOrder
+/home/youmikou/git/tokikosOrder/publish/linux-arm64/TokikosOrder.dll
+/home/youmikou/git/tokikosOrder/publish/linux-arm64/TokikosOrder.deps.json
+/home/youmikou/git/tokikosOrder/publish/linux-arm64/TokikosOrder.runtimeconfig.json
+/home/youmikou/git/tokikosOrder/publish/linux-arm64/TokikosOrder.pdb
+/home/youmikou/git/tokikosOrder/publish/linux-arm64/SkiaSharp.dll
+/home/youmikou/git/tokikosOrder/publish/linux-arm64/libSkiaSharp.so
