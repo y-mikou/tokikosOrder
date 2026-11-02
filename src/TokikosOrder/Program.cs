@@ -97,7 +97,6 @@ internal static class Program
 
             if (bleed > 0)
             {
-                paint.Color = new SKColor(255, 165, 0); // orange
                 var xCover1FrameInnerLeft = ToPixels(trim + bleed, dpi);
                 var xCover1FrameInnerRight = ToPixels(trim + coverWidth - bleed, dpi);
                 var xCover2FrameInnerLeft = ToPixels(trim + coverWidth + spineWidth + bleed, dpi);
@@ -105,10 +104,13 @@ internal static class Program
                 var yFrameInnerTop = ToPixels(trim + bleed, dpi);
                 var yFrameInnerBottom = ToPixels(trim + coverHeight - bleed, dpi);
 
+                paint.Color = SKColors.Yellow;
                 DrawFrame(canvas, paint, xTrim, xCover1End, yTrim, yCoverEnd,
                     xCover1FrameInnerLeft, xCover1FrameInnerRight, yFrameInnerTop, yFrameInnerBottom);
+                paint.Color = new SKColor(255, 165, 0); // orange
                 canvas.DrawRect(SKRect.Create(xCover1End, yTrim, xSpineEnd - xCover1End, yFrameInnerTop - yTrim), paint);
                 canvas.DrawRect(SKRect.Create(xCover1End, yFrameInnerBottom, xSpineEnd - xCover1End, yCoverEnd - yFrameInnerBottom), paint);
+                paint.Color = SKColors.Yellow;
                 DrawFrame(canvas, paint, xSpineEnd, xCover2End, yTrim, yCoverEnd,
                     xCover2FrameInnerLeft, xCover2FrameInnerRight, yFrameInnerTop, yFrameInnerBottom);
             }

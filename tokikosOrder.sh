@@ -131,10 +131,10 @@ draw_rect() {
 draw_frame() {
     local left=$1 right=$2 top=$3 bottom=$4
     local inner_left=$5 inner_right=$6 inner_top=$7 inner_bottom=$8
-    draw_rect orange "$left" "$top" "$right" "$inner_top"
-    draw_rect orange "$left" "$inner_bottom" "$right" "$bottom"
-    draw_rect orange "$left" "$inner_top" "$inner_left" "$inner_bottom"
-    draw_rect orange "$inner_right" "$inner_top" "$right" "$inner_bottom"
+    draw_rect yellow "$left" "$top" "$right" "$inner_top"
+    draw_rect yellow "$left" "$inner_bottom" "$right" "$bottom"
+    draw_rect yellow "$left" "$inner_top" "$inner_left" "$inner_bottom"
+    draw_rect yellow "$inner_right" "$inner_top" "$right" "$inner_bottom"
 }
 
 image_args=(-size "${width}x${height}" xc:red)
