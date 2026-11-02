@@ -144,6 +144,8 @@ draw_rect green "$x_spine_end" "$y_trim" "$x_cover2_end" "$y_cover_end"
 if awk -v b="$bleed" 'BEGIN { exit !(b > 0) }'; then
     draw_frame "$x_trim" "$x_cover1_end" "$y_trim" "$y_cover_end" \
         "$x_cover1_frame_inner_left" "$x_cover1_frame_inner_right" "$y_frame_inner_top" "$y_frame_inner_bottom"
+    draw_rect orange "$x_cover1_end" "$y_trim" "$x_spine_end" "$y_frame_inner_top"
+    draw_rect orange "$x_cover1_end" "$y_frame_inner_bottom" "$x_spine_end" "$y_cover_end"
     draw_frame "$x_spine_end" "$x_cover2_end" "$y_trim" "$y_cover_end" \
         "$x_cover2_frame_inner_left" "$x_cover2_frame_inner_right" "$y_frame_inner_top" "$y_frame_inner_bottom"
 fi

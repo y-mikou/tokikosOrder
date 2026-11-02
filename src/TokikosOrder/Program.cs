@@ -107,6 +107,8 @@ internal static class Program
 
                 DrawFrame(canvas, paint, xTrim, xCover1End, yTrim, yCoverEnd,
                     xCover1FrameInnerLeft, xCover1FrameInnerRight, yFrameInnerTop, yFrameInnerBottom);
+                canvas.DrawRect(SKRect.Create(xCover1End, yTrim, xSpineEnd - xCover1End, yFrameInnerTop - yTrim), paint);
+                canvas.DrawRect(SKRect.Create(xCover1End, yFrameInnerBottom, xSpineEnd - xCover1End, yCoverEnd - yFrameInnerBottom), paint);
                 DrawFrame(canvas, paint, xSpineEnd, xCover2End, yTrim, yCoverEnd,
                     xCover2FrameInnerLeft, xCover2FrameInnerRight, yFrameInnerTop, yFrameInnerBottom);
             }
