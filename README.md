@@ -2,7 +2,7 @@
 
 小説の表紙入稿用に、表紙・背表紙・断ち切り・塗り足しを色分けしたJPEG 画像を生成します。
 
-<img width="1920" height="1199" alt="Image" src="https://github.com/user-attachments/assets/ac231518-b8e0-4438-af49-556fecef85cb" />
+<img width="1309" height="905" alt="Image" src="https://github.com/user-attachments/assets/1ef9bf5e-fcde-433c-b295-bad922ef90a3" />
 
 全ての寸法入力はミリメートルです。
 
